@@ -20,16 +20,16 @@ Lineのトークを解析して、文字数や返信頻度、絵文字の使用�
 画像送信: 66回
 ```
 
-会話量
+会話量  
 ![incl_chars](https://user-images.githubusercontent.com/12064169/93706227-289c0580-fb5f-11ea-8d27-41b04ccbf2dd.png)
 
-返信頻度
+返信頻度  
 ![intarval](https://user-images.githubusercontent.com/12064169/93706241-3a7da880-fb5f-11ea-8bea-53afb0caffce.png)
 
-使用絵文字
+使用絵文字  
 ![emoji](https://user-images.githubusercontent.com/12064169/93706244-3e112f80-fb5f-11ea-9343-689dd5510822.png)
 
-Word cloud (りんな分のみ)
+Word cloud (りんな分のみ)  
 ![wc](https://user-images.githubusercontent.com/12064169/93706247-410c2000-fb5f-11ea-9add-650786e8047b.png)
 
 
