@@ -20,16 +20,16 @@ Lineのトークを解析して、文字数や返信頻度、絵文字の使用�
 画像送信: 66回
 ```
 
-会話量
+会話量  
 ![incl_chars](https://user-images.githubusercontent.com/12064169/93706227-289c0580-fb5f-11ea-8d27-41b04ccbf2dd.png)
 
-返信頻度
+返信頻度  
 ![intarval](https://user-images.githubusercontent.com/12064169/93706241-3a7da880-fb5f-11ea-8bea-53afb0caffce.png)
 
-使用絵文字
+使用絵文字  
 ![emoji](https://user-images.githubusercontent.com/12064169/93706244-3e112f80-fb5f-11ea-9343-689dd5510822.png)
 
-Word cloud (りんな分のみ)
+Word cloud (りんな分のみ)  
 ![wc](https://user-images.githubusercontent.com/12064169/93706247-410c2000-fb5f-11ea-9add-650786e8047b.png)
 
 
@@ -61,3 +61,7 @@ Word cloud (りんな分のみ)
   janomeオプションで復号語に対応するオプションがあり、それを使う手もあるのですが精度がイマイチだったので結合しないようにしています。その代わり、手動で結合したいものは結合するような処理を書いています。人名などは分けられることも多いので、手動で結合するような使い方が良いです。
 - フォントの追加 (l.388)  
   Win10標準のSegoeだと化ける絵文字がある。symbolaとかがよくて、必要に応じてFONT2にパスを与えると、絵文字分析でそちらのフォントでも併記してくれる。
+- 絵文字解析の最小頻度 (l.562)  
+  今は2回以上使った絵文字を解析対象にしています（*min_freq=1*）。適宜カウントを変更してください。
+- Word Cloudの最大文字数 (l.383)  
+  今は130文字です。（*wc_max_words = 130*）。増やすとごちゃごちゃして、減らすとスッキリします。
