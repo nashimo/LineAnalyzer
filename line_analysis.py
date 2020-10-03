@@ -73,18 +73,18 @@ class LineTalkAnalyzer:
             self.pat_talk_begin = re.compile(r"^(\d\d:\d\d) (.+?) (.+)")
             self.strpfmt = "%Y.%m.%d %H:%M"
             self.strpfmt_date = "%Y.%m.%d"
+            self.pat_time = re.compile(r"^(\d\d?):(\d{2}):?(\d?\d?)$")
         else:  # Phone
             self.pat_date = re.compile(r"^(20\d\d\/\d?\d\/\d?\d)\((.)\)")
             self.pat_talk_begin = re.compile(r"^(\d?\d:\d\d)	(.+?)	(.+)")
             self.strpfmt = "%Y/%m/%d %H:%M"
             self.strpfmt_date = "%Y/%m/%d"
+            self.pat_time = re.compile(r"^通話時間(\d\d?):(\d{2}):?(\d?\d?)$")
         # 読み飛ばすパターン
         self.pat_url = re.compile(
             r"(https?:\/\/[=\w!?\/+\-_~;.,*&@#$%()'[\]]+)")  # URLマッチ
         self.pat_add = re.compile(r".+がグループに参加しました。")
         self.pat_invite = re.compile(r".+を招待しました。")
-        # 電話履歴から時間を取得するためのパターン
-        self.pat_time = re.compile(r"^(\d\d?):(\d{2}):?(\d?\d?)$")
         return
 
     def parse_raw_talk(self, talk):
